@@ -12,21 +12,13 @@ The goal of EMF is to provide standard, efficient and uniform functions for laun
 ## EMF Consists of two main parts:
 1) **EMF_C_CORE** and **EMF_CPP_CORE**, which include functions required to standardize the following:
 -**Variable Types**
-
 -**Watchdog**
-
 -**MCU Speed ​​+ Restart MCU**
-
 -**Bit Manipulation**
-
 -**GIO**
-
 -**Delay**
-
 -**Button**
-
 -**EEPROM or Write flash**
-
 -**Math + String + Time + TrueFloat + Convert**
 
 2) Other functions will be implemented in folders named **EMF_C_EXTENTION** and **EMF_CPP_EXTENTION**.
@@ -139,6 +131,21 @@ Open **EMF.Config.h** and UnComment Target MCU define and save file
 
 6)
 Add **EMF_init();** in main Function
+
+## Help : Help_Add EMF Lib to CubeIDE
+==============================================================
+1)Create Project C(File>New>STm32 Project)
+2)
+2-1)Copy All *.h File From "EMF\EMF_CPP_CORE" and "EMF\EMF_CPP_EXTENTION"  to "Core\Inc" in Main Folder Project
+2-2)Copy All *.c File From "EMF\EMF_CPP_CORE" and "EMF\EMF_CPP_EXTENTION" to "Core\Src" in Main Folder Project
+3)
+3-1)Right Click in Project Name in "Project Explorer" and select "Properties"
+3-2)Resource>Text File encoding : select Others UTF-8
+4)Build Project
+5)#include "EMF.h"  in "Main.c"
+6)Open "EMF.Config.h and UnComment Target MCU define and save file
+7)Add EMF_init(); in main Function
+
 ## Badges
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
