@@ -17,6 +17,7 @@
 * v5.3_14040709            E.Rahmanian    Edit EMF version
 * v5.3.1_14040803          E.Rahmanian    Edit EMF version
 * v5.5_14040810            E.Rahmanian    Edit EMF version
+* v5.6_14040903            E.Rahmanian    Edit EMF version | add{EMF.Date.h}
 ******************************************************************************************
 *EMF Targets :
 *1)Variable Types
@@ -33,7 +34,7 @@
 #define EMF_H
 
 #define EMF_C
-#define EMF_VERSION_5_5_0_0
+#define EMF_VERSION_5_6_0_0
 //=========================================================================================
 // includes
 //=========================================================================================
@@ -52,5 +53,6 @@
 #include "EMF.Button.h"
 #include "EMF.InternalFlash.h"
 #include "EMF.IndependentWatchdog.h"
+#include "EMF.Date.h"
 
 #endif
