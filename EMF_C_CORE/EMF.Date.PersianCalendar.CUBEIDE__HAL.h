@@ -12,6 +12,7 @@
 *
 * DATE                     NAME           DESCRIPTION
 * v5.6_14040903            E.Rahmanian    Create
+* v5.7_14040924            E.Rahmanian    Add{EMF_PersianCalendar_DayOfWeek_1To7SaturdayToFriday_0OutOfReange}
 ******************************************************************************************
 */
 #if defined(EMF_C)
@@ -50,6 +51,10 @@ bool EMF_PersianCalendar_AddOrSubtractDay_Return_1Ok_0OutOfReange(uint16 *Year1_
 bool EMF_PersianCalendar_ConvertDate_PersianToGregorian_Return_1Ok_0OutOfReange(
     uint16 PersianYear_1400to1500, uint8 PersianMonth_1to12, uint8 PersianDay_1to31,
     uint16 *ReturnGregorianYear_2021to2122, uint8 *ReturnGregorianMonth_1to12, uint8 *ReturnGregorianDay_1to31);
+/**
+* @brief MinPersianDate   : 1400/01/01     MaxPersianDate : 1500/12/29
+*/
+uint8 EMF_PersianCalendar_DayOfWeek_1To7SaturdayToFriday_0OutOfReange(uint16 Year1_1400to1500, uint8 Month_1to12, uint8 Day_1to31);
 
 #endif
 #endif

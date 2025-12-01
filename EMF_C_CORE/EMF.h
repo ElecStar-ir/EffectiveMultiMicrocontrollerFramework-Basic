@@ -18,6 +18,7 @@
 * v5.3.1_14040803          E.Rahmanian    Edit EMF version
 * v5.5_14040810            E.Rahmanian    Edit EMF version
 * v5.6_14040903            E.Rahmanian    Edit EMF version | add{EMF.Date.h}
+* v5.7_14040924            E.Rahmanian    Edit EMF version
 ******************************************************************************************
 *EMF Targets :
 *1)Variable Types
@@ -34,7 +35,7 @@
 #define EMF_H
 
 #define EMF_C
-#define EMF_VERSION_5_6_0_0
+#define EMF_VERSION_5_7_0_0
 //=========================================================================================
 // includes
 //=========================================================================================

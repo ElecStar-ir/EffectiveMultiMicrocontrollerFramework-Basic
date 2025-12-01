@@ -12,6 +12,7 @@
  *
  * DATE                     NAME           DESCRIPTION
  * v5.6_14040903            E.Rahmanian    Create
+ * v5.7_14040924            E.Rahmanian    Add{EMF_GregorianCalendar_DayOfWeek_1To7SaturdayToFriday_0OutOfReange}
  ******************************************************************************************
  */
 #include "EMF.h"
@@ -232,7 +233,25 @@ bool EMF_GregorianCalendar_ConvertDate_GregorianToPersian_Return_1Ok_0OutOfReang
 
     return 0;
 }
+//=========================================================================================
+//=========================================================================================
+uint8 EMF_GregorianCalendar_DayOfWeek_1To7SaturdayToFriday_0OutOfReange(uint16 Year_1to9999, uint8 Month_1to12, uint8 Day_1to31){
+    if(EMF_GregorianCalendar_IsValidDate_Return_1Valid_0Notvalid(Year_1to9999, Month_1to12, Day_1to31) == 0){
+        return 0;
+    }
 
+    if (Month_1to12 < 3){
+        Month_1to12 += 12;
+        Year_1to9999 -= 1;
+    }
+
+    uint8_t K = Year_1to9999 % 100;
+    uint16_t J = Year_1to9999 / 100;
+
+    int8_t h = (int8_t)((Day_1to31 + ((13 * (Month_1to12 + 1)) / 5) + K + (K / 4) + (J / 4) + (5 * J)) % 7);
+
+    return h + 1; // 1=Saturday ... 7=Friday
+}
 
 
 
