@@ -17,8 +17,9 @@
  * v5.0.2_14031028          E.Rahmanian    Edit EMF version
  * v5.1_14040709            E.Rahmanian    Edit EMF version
  * v5.1.1_14040803          E.Rahmanian    Fixed
+ * v5.2_14050505            E.Rahmanian    Edit "EMF Targets" | Remove "EMF_VERSION" | add "#include "EMF.Version.h""
  ******************************************************************************************
- *EMF Targets :
+*EMF Targets :
 *1)Variable Types
 *2)Watchdog
 *3)MCU Speed + Restart MCU
@@ -27,22 +28,23 @@
 *6)Delay
 *7)Button
 *8)EEPROM or Write flash
-*9)Math + String + Time + TrueFloat + Convert
+*9)software uart
+*10)Math + String + Time + TrueFloat + Convert
  */
 #ifndef EMF_H
 #define EMF_H
 
 #define EMF_CPP
-#define EMF_VERSION_5_1_1_0
 //=========================================================================================
 // includes
 //=========================================================================================
 #include "EMF.Config.h"
+#include "EMF.Version.h"
 #include "EMF.MCU.h"
 #include "EMF.DataType.h"
 #include "EMF.BitManipulation.h"
 #include "EMF.Standards.h"
-//#include "EMF.Watchdog.h"
+#include "EMF.Watchdog.h"
 #include "EMF.Init.h"
 #include "EMF.System.h"
 #include "EMF.GIO.h"

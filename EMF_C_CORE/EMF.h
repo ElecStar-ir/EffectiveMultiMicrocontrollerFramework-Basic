@@ -19,6 +19,7 @@
 * v5.5_14040810            E.Rahmanian    Edit EMF version
 * v5.6_14040903            E.Rahmanian    Edit EMF version | add{EMF.Date.h}
 * v5.7_14040924            E.Rahmanian    Edit EMF version
+* v5.8_14050505            E.Rahmanian    Edit "EMF Targets" | Remove "EMF_VERSION" | add "#include "EMF.Version.h""
 ******************************************************************************************
 *EMF Targets :
 *1)Variable Types
@@ -29,17 +30,18 @@
 *6)Delay
 *7)Button
 *8)EEPROM or Write flash
-*9)Math + String + Time + TrueFloat + Convert
+*9)software uart
+*10)Math + String + Time + TrueFloat + Convert
 */
 #ifndef EMF_H
 #define EMF_H
 
 #define EMF_C
-#define EMF_VERSION_5_7_0_0
 //=========================================================================================
 // includes
 //=========================================================================================
 #include "EMF.Config.h"
+#include "EMF.Version.h"
 #include "EMF.MCU.h"
 #include "EMF.DataType.h"
 #include "EMF.BitManipulation.h"

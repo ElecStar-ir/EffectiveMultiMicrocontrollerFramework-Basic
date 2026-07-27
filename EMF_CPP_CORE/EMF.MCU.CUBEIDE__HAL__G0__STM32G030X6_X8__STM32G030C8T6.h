@@ -12,6 +12,7 @@
  *
  * DATE                     NAME           DESCRIPTION
  * v5.1_14040709            E.Rahmanian    Create
+ * v5.2_14050505            E.Rahmanian    Fixed => add "extern "C" {" and __cplusplus"
  ******************************************************************************************
  */
 #if defined(CUBEIDE__HAL__G0__STM32G030X6_X8__STM32G030C8T6)
@@ -33,7 +34,15 @@
     #include <wchar.h>
     #include <wctype.h>
 
-    #include "stm32g0xx_hal.h"
+    #ifdef __cplusplus
+    extern "C" {
+    #endif
+
+        #include "stm32g0xx_hal.h"
+        
+    #ifdef __cplusplus
+    }
+    #endif
 
     #define typeof decltype
 

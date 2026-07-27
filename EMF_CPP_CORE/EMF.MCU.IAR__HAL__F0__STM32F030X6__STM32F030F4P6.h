@@ -14,6 +14,7 @@
  * v4.0_14020803            E.Rahmanian    Create
  * v5.0.1_14031028			E.Rahmanian    Optimize
  * v5.0.2_14031028			E.Rahmanian    Comment Fixed
+ * v5.2_14050505            E.Rahmanian    Fixed => add "extern "C" {" and __cplusplus"
  ******************************************************************************************
  */
 #if defined(IAR__HAL__F0__STM32F030X6__STM32F030F4P6)
@@ -35,8 +36,15 @@
     #include <wchar.h>
     #include <wctype.h>
 
-    #include "stm32f0xx_hal.h"
+    #ifdef __cplusplus
+    extern "C" {
+    #endif
 
+        #include "stm32f0xx_hal.h"
+        
+    #ifdef __cplusplus
+    }
+    #endif
 
     //Family DNA!
     #define IAR__HAL__F0__STM32F030X6 (1)
